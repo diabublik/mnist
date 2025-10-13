@@ -1,16 +1,15 @@
-Iter: 0 Train Error: 0.88490 Train Acc: 0.290 | Test Error: 0.73802 Test Acc: 0.583  
-Iter: 1 Train Error: 0.59637 Train Acc: 0.727 | Test Error: 0.58616 Test Acc: 0.737  
-Iter: 2 Train Error: 0.50141 Train Acc: 0.803 | Test Error: 0.54205 Test Acc: 0.770  
-Iter: 3 Train Error: 0.46232 Train Acc: 0.828 | Test Error: 0.51816 Test Acc: 0.786  
-Iter: 4 Train Error: 0.43793 Train Acc: 0.836 | Test Error: 0.50472 Test Acc: 0.797  
-Iter: 5 Train Error: 0.42015 Train Acc: 0.854 | Test Error: 0.49453 Test Acc: 0.802  
-Iter: 6 Train Error: 0.40542 Train Acc: 0.863 | Test Error: 0.48725 Test Acc: 0.808  
-Iter: 7 Train Error: 0.39254 Train Acc: 0.872 | Test Error: 0.48066 Test Acc: 0.813  
-Iter: 8 Train Error: 0.38050 Train Acc: 0.878 | Test Error: 0.47373 Test Acc: 0.815  
-Iter: 9 Train Error: 0.36939 Train Acc: 0.882 | Test Error: 0.46837 Test Acc: 0.819  
-Iter: 10 Train Error: 0.35858 Train Acc: 0.892 | Test Error: 0.46304 Test Acc: 0.822  
-Iter: 11 Train Error: 0.34826 Train Acc: 0.896 | Test Error: 0.45513 Test Acc: 0.827  
-Iter: 12 Train Error: 0.33807 Train Acc: 0.901 | Test Error: 0.44918 Test Acc: 0.832  
-Iter: 13 Train Error: 0.32800 Train Acc: 0.906 | Test Error: 0.44280 Test Acc: 0.835  
-Iter: 14 Train Error: 0.31829 Train Acc: 0.909 | Test Error: 0.43752 Test Acc: 0.839  
-Iter: 15 Train Error: 0.30876 Train Acc: 0.916 | Test Error: 0.43190 Test Acc: 0.840  
+Epoch: 1 | Train error: 0.66518 | Train acc: 0.640 | Test error: 0.55204 | Test acc: 0.731 | Epoch time: 30.4  
+Epoch: 2 | Train error: 0.41870 | Train acc: 0.858 | Test error: 0.50394 | Test acc: 0.811 | Epoch time: 30.2  
+Epoch: 3 | Train error: 0.34459 | Train acc: 0.893 | Test error: 0.45866 | Test acc: 0.841 | Epoch time: 30.1  
+Epoch: 4 | Train error: 0.30155 | Train acc: 0.923 | Test error: 0.41507 | Test acc: 0.859 | Epoch time: 30.1  
+Epoch: 5 | Train error: 0.27239 | Train acc: 0.937 | Test error: 0.39934 | Test acc: 0.864 | Epoch time: 29.9  
+Epoch: 6 | Train error: 0.24988 | Train acc: 0.949 | Test error: 0.39821 | Test acc: 0.866 | Epoch time: 29.8  
+Epoch: 7 | Train error: 0.23095 | Train acc: 0.964 | Test error: 0.40023 | Test acc: 0.866 | Epoch time: 30.0  
+Epoch: 8 | Train error: 0.21455 | Train acc: 0.977 | Test error: 0.40373 | Test acc: 0.868 | Epoch time: 30.1  
+Epoch: 9 | Train error: 0.19938 | Train acc: 0.982 | Test error: 0.40523 | Test acc: 0.870 | Epoch time: 30.8  
+Epoch: 10 | Train error: 0.18553 | Train acc: 0.985 | Test error: 0.41063 | Test acc: 0.869 | Epoch time: 31.0  
+Epoch: 11 | Train error: 0.17248 | Train acc: 0.991 | Test error: 0.41726 | Test acc: 0.870 | Epoch time: 30.6  
+Epoch: 12 | Train error: 0.16074 | Train acc: 0.994 | Test error: 0.42007 | Test acc: 0.871 | Epoch time: 29.7  
+Epoch: 13 | Train error: 0.15004 | Train acc: 0.994 | Test error: 0.42040 | Test acc: 0.872 | Epoch time: 29.6  
+Epoch: 14 | Train error: 0.14014 | Train acc: 0.998 | Test error: 0.42530 | Test acc: 0.872 | Epoch time: 29.5  
+Epoch: 15 | Train error: 0.13133 | Train acc: 0.998 | Test error: 0.42917 | Test acc: 0.872 | Epoch time: 29.5  

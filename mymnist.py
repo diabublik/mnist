@@ -128,5 +128,3 @@ for j in range(iterations):
         f"Test acc: {test_acc:.3f} | "
         f"Epoch time: {epoch_time:.1f}"
     )
-
-
