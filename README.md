@@ -1,0 +1,16 @@
+Iter: 0 Train Error: 0.88490 Train Acc: 0.290 | Test Error: 0.73802 Test Acc: 0.583  
+Iter: 1 Train Error: 0.59637 Train Acc: 0.727 | Test Error: 0.58616 Test Acc: 0.737  
+Iter: 2 Train Error: 0.50141 Train Acc: 0.803 | Test Error: 0.54205 Test Acc: 0.770  
+Iter: 3 Train Error: 0.46232 Train Acc: 0.828 | Test Error: 0.51816 Test Acc: 0.786  
+Iter: 4 Train Error: 0.43793 Train Acc: 0.836 | Test Error: 0.50472 Test Acc: 0.797  
+Iter: 5 Train Error: 0.42015 Train Acc: 0.854 | Test Error: 0.49453 Test Acc: 0.802  
+Iter: 6 Train Error: 0.40542 Train Acc: 0.863 | Test Error: 0.48725 Test Acc: 0.808  
+Iter: 7 Train Error: 0.39254 Train Acc: 0.872 | Test Error: 0.48066 Test Acc: 0.813  
+Iter: 8 Train Error: 0.38050 Train Acc: 0.878 | Test Error: 0.47373 Test Acc: 0.815  
+Iter: 9 Train Error: 0.36939 Train Acc: 0.882 | Test Error: 0.46837 Test Acc: 0.819  
+Iter: 10 Train Error: 0.35858 Train Acc: 0.892 | Test Error: 0.46304 Test Acc: 0.822  
+Iter: 11 Train Error: 0.34826 Train Acc: 0.896 | Test Error: 0.45513 Test Acc: 0.827  
+Iter: 12 Train Error: 0.33807 Train Acc: 0.901 | Test Error: 0.44918 Test Acc: 0.832  
+Iter: 13 Train Error: 0.32800 Train Acc: 0.906 | Test Error: 0.44280 Test Acc: 0.835  
+Iter: 14 Train Error: 0.31829 Train Acc: 0.909 | Test Error: 0.43752 Test Acc: 0.839  
+Iter: 15 Train Error: 0.30876 Train Acc: 0.916 | Test Error: 0.43190 Test Acc: 0.840  
