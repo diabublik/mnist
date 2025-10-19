@@ -31,6 +31,18 @@ kernel_size = 3
 num_kernels = 4
 
 conv_weights = 0.2 * torch.rand((kernel_size * kernel_size, num_kernels)) - 0.1 # (9, 4)
+hidden_size = (images.shape[1] - kernel_size + 1) * (images.shape[2] - kernel_size + 1) * num_kernels
+weights_1_2 = 0.2 * torch.rand((hidden_size, 10)) - 0.1 # (2704, 10)
+
+alpha_adam = 0.001
+beta1, beta2 = 0.9, 0.999
+epsilon = 1e-08
+
+m_conv = torch.zeros_like(conv_weights)
+v_conv = torch.zeros_like(conv_weights)
+m_dense = torch.zeros_like(weights_1_2)
+v_dense = torch.zeros_like(weights_1_2)
+
 
 def extract_patches(images, kernel_size):
     batch_size, height, width = images.shape
@@ -44,9 +56,6 @@ def extract_patches(images, kernel_size):
     # я не ебу как получается эта размерность, это какая то ебатория с этим dim=1
     return torch.stack(patches, dim=1) # (batch_size, 676, 9) 
 
-hidden_size = (images.shape[1] - kernel_size + 1) * (images.shape[2] - kernel_size + 1) * num_kernels
-
-weights_1_2 = 0.2 * torch.rand((hidden_size, 10)) - 0.1 # (2704, 10)
 
 for j in range(iterations):
     train_error, correct_cnt = 0.0, 0.0
@@ -88,8 +97,21 @@ for j in range(iterations):
                 patch_grad = patch.transpose(1, 2) @ layer_1_delta[batch_ind:batch_ind+1, patch_ind:patch_ind+1, :] # (1, 9, 4)
                 conv_weights_grad += patch_grad.squeeze(0) # (9, 4)
         
-        weights_1_2 += alpha * (layer_1_flat.T @ layer_2_delta) 
-        conv_weights += alpha * conv_weights_grad / cur_batch_size
+        weights_1_2_grad = layer_1_flat.T @ layer_2_delta
+
+        t = j + 1
+
+        m_conv = beta1 * m_conv + (1 - beta1) * conv_weights_grad
+        m_conv_hat = m_conv / (1 - beta1 ** t)
+        v_conv = beta2 * v_conv + (1 - beta2) * (conv_weights_grad ** 2)
+        v_conv_hat = v_conv / (1 - beta2 ** t)
+        conv_weights += alpha_adam * m_conv_hat / (torch.sqrt(v_conv_hat) + epsilon)
+
+        m_dense = beta1 * m_dense + (1 - beta1) * weights_1_2_grad
+        m_dense_hat = m_dense / (1 - beta1 ** t)
+        v_dense = beta2 * v_dense + (1 - beta2) * (weights_1_2_grad ** 2)
+        v_dense_hat = v_dense / (1 - beta2 ** t)
+        weights_1_2 += alpha_adam * m_dense_hat / (torch.sqrt(v_dense_hat) + epsilon)
 
     train_error /= len(labels)
     train_acc = correct_cnt / len(labels)
